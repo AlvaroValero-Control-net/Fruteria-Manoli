@@ -1,3 +1,5 @@
+// src/app/pages/page-not-found/page-not-found.component.ts
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -5,6 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-page-not-found',
   standalone: true,
   imports: [CommonModule],
-  template: `<h2>Página no encontrada</h2>`
+  templateUrl: './page-not-found.component.html',
+  styleUrls: ['./page-not-found.component.css'] 
 })
 export class PageNotFoundComponent {}

@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Detalles de la fruta</h2>
+    <div *ngIf="fruta">
+        <p>Nombre: {{ fruta.nombre }}</p>
+        <p>Precio: {{ fruta.precio | currency }}</p>
+        <button (click)="toggleFavorita()">
+            {{ fruta.favorita ? 'Eliminar favorita' : 'Añadir favorita' }}
+        </button>
+        <button (click)="volverAtras()">Atrás</button>
+    </div>
+</div>

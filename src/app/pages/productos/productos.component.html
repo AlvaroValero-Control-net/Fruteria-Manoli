@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Listado de frutas disponibles</h2>
+    <button (click)="toggleFavoritas()">
+    {{ mostrarFavoritas ? 'Mostrar todas' : 'Mostrar favoritas' }}
+    </button>
+    <ul>
+        <li *ngFor="let fruta of frutasFiltradas">
+            {{ fruta.nombre }} - {{ fruta.precio | currency }}
+            <button (click)="toggleFavorita(fruta)">
+            {{ fruta.favorita ? 'Eliminar favorita' : 'Añadir favorita' }}
+            </button>
+            <button *ngIf="!mostrarFavoritas" (click)="verDetalles(fruta.id)">Ver detalles</button>
+            <button (click)="agregarAlCarrito(fruta)">
+            {{ fruta.anadido ? 'Añadido' : 'Añadir al carrito' }}
+            </button>
+        </li>
+    </ul>
+</div>

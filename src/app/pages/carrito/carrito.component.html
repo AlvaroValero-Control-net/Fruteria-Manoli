@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Resumen de la compra</h2>
+        <ul>
+        <li *ngFor="let fruta of carrito">
+            {{ fruta.nombre }} - {{ fruta.precio | currency }}
+            <button (click)="eliminarDelCarrito(fruta)">Eliminar</button>
+        </li>
+    </ul>
+</div>
